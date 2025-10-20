@@ -1,16 +1,37 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import { ViewTransitions } from "astro:transitions";
+import Hero from "../components/Hero.astro";
+import SocialProof from "../components/SocialProof.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Schedule a Call | Rebel Ape Marketing">
+  <ViewTransitions />
+
+  <!-- Hero with Calendar -->
+  <Hero />
+
+  <!-- What to Expect -->
+  <section id="details" class="mx-auto max-w-6xl px-4 py-10 lg:py-16">
+    <h2 class="text-2xl font-semibold">What to Expect</h2>
+    <div class="mt-6 grid gap-6 sm:grid-cols-3">
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">1) Quick Goals Chat</h3>
+        <p class="mt-2 text-sm text-white/75">We'll align on outcomes that matter to you.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">2) Review & Insights</h3>
+        <p class="mt-2 text-sm text-white/75">We'll look at what's working and where you're leaking.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">3) Clear Next Steps</h3>
+        <p class="mt-2 text-sm text-white/75">Actionable recommendations — whether we work together or not.</p>
+      </div>
+    </div>
+  </section>
+
+  <SocialProof />
+  <Footer />
+</Base>

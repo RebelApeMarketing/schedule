@@ -1,0 +1,14 @@
+---
+import '../styles/global.css';
+const { title = "Rebel Ape" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-neutral-950 text-white">
+    <slot />
+  </body>
+</html>

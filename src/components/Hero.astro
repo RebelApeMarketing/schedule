@@ -1,0 +1,43 @@
+---
+const { phone = "+1 435-246-0401" } = Astro.props
+---
+
+<section class="hero relative bg-black bg-cover bg-center bg-no-repeat pt-[clamp(2rem,4vw,3rem)] pb-8" style="background-image: url('https://RebelApeCDN.b-cdn.net/UOMC/background-gorilla.webp')">
+  <div class="mx-auto max-w-6xl px-5 flex flex-col items-center justify-center">
+    
+    <!-- Rebel Ape Logo -->
+    <div class="flex justify-center mb-8">
+      <img 
+        src="https://RebelApeCDN.b-cdn.net/UOMC/rebel-ape-marketing-logo-white.png" 
+        alt="Rebel Ape Marketing" 
+        class="block w-[clamp(160px,60vw,380px)] h-auto"
+        loading="eager" 
+      />
+    </div>
+
+    <!-- Headline -->
+    <div class="w-full max-w-[1200px] text-center mt-6 mb-8 lg:mt-10 lg:mb-10">
+      <h1 class="font-black text-center text-white text-[clamp(2rem,6.5vw,4.5rem)] sm:text-[clamp(2.6rem,6vw,4.8rem)] leading-tight mb-6 text-balance max-w-none">
+        <span class="text-white">Schedule a Call with </span>
+        <span class="text-green-600">Rebel Ape Marketing</span>
+      </h1>
+      <p class="text-white text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
+        Let's talk about your goals and how to get your marketing performing like it should. No pressure. No hard pitch. Just clarity and direction.
+      </p>
+    </div>
+
+    <!-- Calendar Embed (Full Width in Hero) -->
+    <div class="w-full max-w-6xl mt-10">
+      <div class="bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm border border-white/10 p-6">
+        <iframe 
+          src="https://link.therebelape.com/widget/booking/nMZGE52hRTWV4t0SjD6I" 
+          style="width: 100%; border: none; overflow: hidden; min-height: 600px;" 
+          scrolling="no" 
+          id="nMZGE52hRTWV4t0SjD6I_1760940116234"
+        ></iframe>
+        <script src="https://link.therebelape.com/js/form_embed.js" type="text/javascript"></script>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import { ViewTransitions } from "astro:transitions";
+import Testimonials from "../components/Testimonials.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Call Scheduled | Rebel Ape Marketing">
+  <ViewTransitions />
+
+  <!-- Hero / Confirmation -->
+  <section class="hero relative bg-black bg-cover bg-center bg-no-repeat pt-[clamp(2rem,4vw,3rem)] pb-8" style="background-image: url('https://RebelApeCDN.b-cdn.net/UOMC/background-gorilla.webp')">
+    <div class="mx-auto max-w-6xl px-5 flex flex-col items-center justify-center">
+      
+      <!-- Rebel Ape Logo -->
+      <div class="flex justify-center mb-8">
+        <img 
+          src="https://RebelApeCDN.b-cdn.net/UOMC/rebel-ape-marketing-logo-white.png" 
+          alt="Rebel Ape Marketing" 
+          class="block w-[clamp(160px,60vw,380px)] h-auto"
+          loading="eager" 
+        />
+      </div>
+
+      <!-- Confirmation Message -->
+      <div class="w-full max-w-8 text-center mt-6 mb-12 pb-12 lg:mt-10 lg:mb-16">
+        <h1 class="font-black text-center text-white text-[clamp(2rem,6.5vw,4.5rem)] leading-tight mb-4 text-balance">
+          Your Call is <span class="text-green-600">Scheduled</span>!
+        </h1>
+        <p class="text-white text-base lg:text-lg leading-relaxed">
+          We're looking forward to talking with you. Check your email for confirmation details and a calendar invite.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section id="details" class="mx-auto max-w-6xl px-4 py-4 pt-8 lg:py-6">
+    <h2 class="text-2xl font-semibold mb-6">Before We Talk</h2>
+    <div class="grid gap-6 sm:grid-cols-3">
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium text-green-500 mb-2">✓ Check Your Email</h3>
+        <p class="text-sm text-white/75">Look for a calendar invite and confirmation. Add it to your calendar so you don't miss it.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium text-green-500 mb-2">✓ Grab Some Context</h3>
+        <p class="text-sm text-white/75">Think about your biggest marketing challenge. We'll dig into it together.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium text-green-500 mb-2">✓ No Prep Needed</h3>
+        <p class="text-sm text-white/75">Seriously. Just show up ready to talk. We'll handle the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens on the Call -->
+  <section class="mx-auto max-w-6xl px-4 py-4 pb-12 lg:py-6">
+    <h2 class="text-2xl font-semibold mb-6">What Happens on the Call</h2>
+    <div class="grid gap-6 sm:grid-cols-3">
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">1) Quick Goals Chat</h3>
+        <p class="mt-2 text-sm text-white/75">We'll align on outcomes that matter to you and understand where you're at.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">2) Review & Insights</h3>
+        <p class="mt-2 text-sm text-white/75">We'll look at what's working in your marketing and where you're leaking opportunities.</p>
+      </div>
+      <div class="rounded-md border border-white/10 p-4">
+        <h3 class="font-medium">3) Clear Next Steps</h3>
+        <p class="mt-2 text-sm text-white/75">Actionable recommendations — whether we work together or not.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Testimonials -->
+  <section class="bg-white bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,.065)_1px,transparent_1px)] bg-[size:12px_12px] mx-auto w-full px-4 py-10 lg:py-16">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="text-2xl font-semibold mb-8 text-center text-gray-900">Why Others Trust Us</h2>
+      <Testimonials />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+
+</Base>
