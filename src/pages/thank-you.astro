@@ -3,9 +3,44 @@ import Base from "../layouts/Base.astro";
 import { ViewTransitions } from "astro:transitions";
 import Testimonials from "../components/Testimonials.astro";
 import Footer from "../components/Footer.astro";
+
+const canonical = "https://schedule.therebelape.com/thank-you";
+const title = "Thanks — Your Call Is Booked | Rebel Ape Marketing";
+const description = "Thanks for scheduling! We’ve sent a confirmation email with your call details.";
+const featureImage = "https://RebelApeCDN.b-cdn.net/Schedule/time-booked.webp";
+const imageAlt = "Time booked confirmation for Rebel Ape Marketing";
 ---
 
 <Base title="Call Scheduled | Rebel Ape Marketing">
+  <Fragment slot="head">
+    <link rel="canonical" href={canonical} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={featureImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={featureImage} />
+
+    <!-- JSON-LD: WebPage (thank-you) -->
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": title,
+      "url": canonical,
+      "description": description
+    })}</script>
+  </Fragment>
+
   <ViewTransitions />
 
   <!-- Hero / Confirmation -->
