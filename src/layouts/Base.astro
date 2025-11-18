@@ -12,18 +12,7 @@ const { title = "Rebel Ape" } = Astro.props;
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TS9DGRQB');
     </script>
-
     <!-- End Google Tag Manager -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-  </head>
-  <body class="min-h-screen bg-neutral-950 text-white">
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS9DGRQB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- TruConversion for therebelape.com -->
     <script type="text/javascript">
@@ -37,7 +26,18 @@ const { title = "Rebel Ape" } = Astro.props;
             tjs.parentNode.insertBefore(js, tjs);
         }(document, 'script', 'ti-js'));
     </script>  
-    
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-neutral-950 text-white">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS9DGRQB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <slot />
   </body>
 </html>
