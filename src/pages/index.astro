@@ -5,9 +5,71 @@ import Hero from "../components/Hero.astro";
 import SocialProof from "../components/SocialProof.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Footer from "../components/Footer.astro";
+
+const canonical = "https://schedule.therebelape.com/";
+const title = "Schedule a Call | Rebel Ape Marketing";
+const description = "Book a quick strategy call with Rebel Ape Marketing. Align your goals, get fast insights, and leave with clear next steps—even if we don’t work together.";
+const featureImage = "https://RebelApeCDN.b-cdn.net/Schedule/schedule-a-call.webp";
+const imageAlt = "Schedule a call with Rebel Ape Marketing";
 ---
 
 <Base title="Schedule a Call | Rebel Ape Marketing">
+  <Fragment slot="head">
+    <link rel="canonical" href={canonical} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={featureImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={featureImage} />
+
+    <!-- JSON-LD: WebSite & WebPage -->
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Rebel Ape Marketing",
+      "url": "https://therebelape.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://therebelape.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })}</script>
+
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": title,
+      "url": canonical,
+      "description": description,
+      "thumbnailUrl": featureImage,
+      "isPartOf": {"@type":"WebSite","url":"https://therebelape.com/","name":"Rebel Ape Marketing"}
+    })}</script>
+
+    <!-- JSON-LD: Organization (basic) -->
+    <script type="application/ld+json" is:inline>{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rebel Ape Marketing",
+      "url": "https://therebelape.com/",
+      "logo": "https://therebelape.com/apple-touch-icon.png",
+      "sameAs": [
+        "https://www.facebook.com/RebelApeMarketing",
+        "https://www.linkedin.com/company/rebel-ape-marketing"
+      ]
+    })}</script>
+  </Fragment>
+
   <ViewTransitions />
 
   <!-- Hero with Calendar -->
